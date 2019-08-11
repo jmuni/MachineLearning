@@ -11,31 +11,31 @@ labels = []
 #this batch uses 500 pictures of each, cats, dogs, bird, fish
 #we can use our own, the image names do not matter
 #what matters is the name of the folder
-cats = os.listdir("cats")
-for cat in cats:
-    imag = cv2.imread("cats/" + cat)
+catfolder = os.listdir("cats")
+for catpic in catfolder:
+    imag = cv2.imread("cats/" + catpic)
     img_from_ar = Image.fromarray(imag, 'RGB')
     resized_image = img_from_ar.resize((50, 50))
     data.append(np.array(resized_image))
     labels.append(0)
-dogs = os.listdir("dogs")
-for dog in dogs:
-    imag = cv2.imread("dogs/" + dog)
+dogfolder = os.listdir("dogs")
+for dogpic in dogfolder:
+    imag = cv2.imread("dogs/" + dogpic)
     img_from_ar = Image.fromarray(imag, 'RGB')
     resized_image = img_from_ar.resize((50, 50))
     data.append(np.array(resized_image))
     labels.append(1)
 
-birds = os.listdir("birds")
-for bird in birds:
-    imag = cv2.imread("birds/" + bird)
+birdfolder = os.listdir("birds")
+for birdpic in birdfolder:
+    imag = cv2.imread("birds/" + birdpic)
     img_from_ar = Image.fromarray(imag, 'RGB')
     resized_image = img_from_ar.resize((50, 50))
     data.append(np.array(resized_image))
     labels.append(2)
-fishs = os.listdir("fishs")
-for fish in fishs:
-    imag = cv2.imread("fishs/" + fish)
+fishfolder = os.listdir("fishs")
+for fishpic in fishfolder:
+    imag = cv2.imread("fishs/" + fishpic)
     img_from_ar = Image.fromarray(imag, 'RGB')
     resized_image = img_from_ar.resize((50, 50))
     data.append(np.array(resized_image))
